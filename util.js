@@ -4,7 +4,14 @@ import {createInterface} from "readline"
 // day in a week 
 const days = [  'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ]
 // card path 
-const cardPath = fs.existsSync('/home/ary/Storage/Card/') ? '/home/ary/Storage/Card/' : './Card'
+const cardPath = fs.existsSync('/home/ary/Storage/Card/') ? '/home/ary/Storage/Card/' : './Card/'
+
+// create card Path if doesnt exist 
+if(!fs.existsSync(cardPath)){
+  fs.mkdirSync(cardPath)
+  days.forEach(day => fs.mkdirSync(`${cardPath}${day}`))
+}
+
 const rl = createInterface({input: process.stdin,output: process.stdout})
 
 // get input 
