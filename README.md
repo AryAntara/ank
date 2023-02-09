@@ -20,7 +20,7 @@ All days in folder Card have `main.anki`. it will use if you run this program by
 
 Simple! just type `node index.js new`
 you can follow the step. 
-after that you new anki file will create at ./Card/`today`/`your card name`.anki
+after that your new anki file will create at ```./Card/`today`/`your card name`.anki```
 
 
 
